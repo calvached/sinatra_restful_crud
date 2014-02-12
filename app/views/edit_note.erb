@@ -1,0 +1,18 @@
+<div class="container">
+  <a href="/">Create A Note</a>
+  <a href="/view_all_notes">View All Notes</a>
+
+    <h3>Edit Note: </h3>
+    <form action='/edit_note'
+    method='post'>
+      <p><input type='text' name='title' value='<%= @title%>'></p>
+      <p><textarea rows='4' cols='50' name='content'><%= @content%></textarea></p>
+      <p><input type='submit' value='Edit Note'></p>
+    </form>
+
+    <form action='/delete_note'
+    method='post'>
+      <input type='submit' value='Delete Note'>
+    </form>
+
+</div>

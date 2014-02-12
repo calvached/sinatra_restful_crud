@@ -1,0 +1,10 @@
+<div class='container'>
+  <a href="/">Create A Note</a>
+  <h3>All notes!</h3>
+  <% @notes.each do |note| %>
+  <dl>
+    <dt><a href="/notes/<%= note.id %>"/><%= note.title %></a></dt>
+      <dd><%= note.content %></dd>
+  </dl>
+  <% end %>
+</div>
