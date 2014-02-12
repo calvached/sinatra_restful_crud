@@ -4,7 +4,8 @@ get '/' do
 end
 
 post '/send_note' do
-  Note.create(title: params[:title], content: params[:content])
+  Note.create(title: params[:title],
+              content: params[:content])
 
   redirect '/view_all_notes'
 end
@@ -34,5 +35,6 @@ end
 
 post '/delete_note' do
   Note.find(session[:note_id]).destroy
+
   redirect '/view_all_notes'
 end
